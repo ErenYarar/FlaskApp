@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="jumbotron text-center">
+<h3>Yazılım dili bloğuna hoşgeldiniz</h3>
+<p>dfdfsefdfdfdfererdfsdfsefsdfsefsedfdfsefdfdfdfererdfsdfsefsdfsefsedfdfsefdfdfdfererdfsdfsefsdfsefse
+dfdfsefdfdfdfererdfsdfsefsdfsefsedfdfsefdfdfdfererdfsdfsefsdfsefsedfdfsefdfdfdfererdfsdfsefsdfsefsedfdererdfsdfs
+dfdfsefdfdfdfererdfsdfsefsdfsefsedfdfsefdfdfdfererdfsdfsefsdfsefsedfdfsefdfdfdfererdfsdfsefsdfsefse</p>
+
+</div>
+{% if islem == 1 %}
+<p>1</p>
+{% elif islem == 2 %}
+<p>2</p>
+{% elif islem == 3 %}
+<p>3</p>
+{% else %}
+<p>Geçersiz</p>
+{% endif %}
+
+
+<ul>
+    {% for  numbers in numbers %}
+        <li>{{numbers}}</li>
+    {% endfor %}
+</ul>
+<ul>
+{% for sayilar in  sayilar%}
+    <li>Articale Id: {{sayilar.id}} - Title: {{sayilar.title}} - Content: {{sayilar.content}}
+{% endfor %}
+</ul>
+
+{% endblock %}
+
+
